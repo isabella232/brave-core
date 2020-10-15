@@ -1090,6 +1090,7 @@ class NewTabPage extends React.Component<Props, State> {
           feed={this.props.todayData.feed}
           onAnotherPageNeeded={this.props.actions.anotherPageNeeded}
           displayedPageCount={this.props.todayData.currentPageIndex}
+          publishers={this.props.todayData.publishers}
         />
         }
         <Settings
@@ -1129,6 +1130,7 @@ class NewTabPage extends React.Component<Props, State> {
           bitcoinDotComSupported={newTabData.bitcoinDotComSupported}
           showBitcoinDotCom={newTabData.showBitcoinDotCom}
           toggleShowBitcoinDotCom={this.toggleShowBitcoinDotCom}
+          todayPublishers={this.props.todayData.publishers}
         />
       </Page.App>
     )
