@@ -35,7 +35,7 @@ export const localeStrings = {
   siteBannerNoticeText: 'This creator has not yet signed up to receive contributions from Brave users. Your browser will keep trying to contribute until they verify, or until 90 days have passed.',
   sorryToSeeYouGo: 'Sorry to see you go…',
   supportThisCreator: 'Support this creator',
-  termsOfService: 'By proceeding, you agree to the $1Terms of Service$2.',
+  termsOfService: 'By proceeding, you agree to the $1Terms of Service$2 and $3Privacy Policy$4.',
   thanksForTheSupport: 'Thanks for the support!',
   tipHasBeenSent: 'Your one time tip has been sent.',
   tipPostSubtitle: 'for their post',

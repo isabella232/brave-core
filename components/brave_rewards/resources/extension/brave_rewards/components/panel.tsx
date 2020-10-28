@@ -11,6 +11,7 @@ import { Provider } from '../../../ui/components/profile'
 import { NotificationType, WalletState } from '../../../ui/components/walletWrapper'
 import { RewardsNotificationType } from '../constants/rewards_panel_types'
 import { Type as AlertType } from '../../../ui/components/alert'
+import { RewardsOptInModal } from '../../../shared/onboarding'
 
 // Utils
 import * as rewardsPanelActions from '../actions/rewards_panel_actions'
@@ -744,6 +745,11 @@ export class Panel extends React.Component<Props, State> {
             {...this.getWalletSummary()}
           />
         </WalletSummarySlider>
+        <RewardsOptInModal
+          onAddFunds={this.onAddFunds}
+          onClose={this.doNothing}
+          onEnable={this.doNothing}
+        />
       </WalletWrapper>
     )
   }

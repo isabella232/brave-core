@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react'
 import { App } from '../components/app'
 import { DialogArgs, Host, HostState, MediaMetaData } from '../lib/interfaces'
 import { HostContext } from '../lib/host_context'
-import { LocaleContext } from '../lib/locale_context'
+import { LocaleContext } from '../../shared/lib/locale_context'
 
 import { localeStrings } from './locale_strings'
 

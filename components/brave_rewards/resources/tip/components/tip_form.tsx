@@ -8,7 +8,7 @@ import { TwitterColorIcon, RedditColorIcon } from 'brave-ui/components/icons'
 
 import { TipKind, MediaMetaData } from '../lib/interfaces'
 import { HostContext } from '../lib/host_context'
-import { Locale, LocaleContext } from '../lib/locale_context'
+import { Locale, LocaleContext } from '../../shared/lib/locale_context'
 
 import { SliderSwitch, SliderSwitchOption } from './slider_switch'
 import { TipComplete } from './tip_complete'
