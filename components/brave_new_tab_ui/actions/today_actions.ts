@@ -30,7 +30,7 @@ export type SetPublisherPrefPayload = {
   publisherId: string
   enabled: boolean | null
 }
-export const setPublisherPref = createAction<SetPublisherPrefPayload>('setPublisherPref', (publisherId: string, enabled: boolean | null) => ({publisherId, enabled}))
+export const setPublisherPref = createAction<SetPublisherPrefPayload>('setPublisherPref', (publisherId: string, enabled: boolean | null) => ({ publisherId, enabled }))
 
 export const checkForUpdate = createAction('checkForUpdate')
 
@@ -40,3 +40,5 @@ export type IsUpdateAvailablePayload = {
 export const isUpdateAvailable = createAction<IsUpdateAvailablePayload>('isUpdateAvailable')
 
 export const resetTodayPrefsToDefault = createAction('resetTodayPrefsToDefault')
+
+export const refresh = createAction('refresh')
