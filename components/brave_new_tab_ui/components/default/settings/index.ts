@@ -276,7 +276,7 @@ interface SettingsWrapperProps {
 }
 
 export const SettingsWrapper = styled<SettingsWrapperProps, 'div'>('div')`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
