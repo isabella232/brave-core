@@ -114,6 +114,7 @@ AdsImpl::AdsImpl(
       client_(std::make_unique<Client>(this)),
       confirmations_(std::make_unique<Confirmations>(this)),
       database_(std::make_unique<database::Initialize>(this)),
+      experiments_(std::make_unique<Experiments>(this)),
       get_catalog_(std::make_unique<GetCatalog>(this)),
       p2a_(std::make_unique<P2A>(this)),
       page_classifier_(std::make_unique<classification::PageClassifier>(this)),
@@ -227,6 +228,8 @@ void AdsImpl::InitializeStep6(
   redeem_unblinded_payment_tokens_->MaybeRedeemAfterDelay(wallet_);
 
   ad_conversions_->StartTimerIfReady();
+
+  experiments_->Log();
 
   MaybeServeAdNotification(false);
 
