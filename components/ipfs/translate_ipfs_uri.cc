@@ -9,6 +9,7 @@
 
 #include "base/logging.h"
 #include "brave/components/ipfs/ipfs_constants.h"
+#include "brave/components/ipfs/ipfs_gateway.h"
 
 namespace ipfs {
 
@@ -41,10 +42,12 @@ bool TranslateIPFSURI(const GURL& url, GURL* new_url, bool local) {
       // new_url would be:
       // https://dweb.link/ipfs/[cid]//wiki/Vincent_van_Gogh.html
       if (new_url) {
-        *new_url = GURL(std::string(local ? kDefaultIPFSLocalGateway
-                                          : kDefaultIPFSGateway) +
-                        (ipfs_scheme ? "/ipfs/" : "/ipns/") + cid + path);
-        VLOG(1) << "[IPFS] " << __func__ << " new URL: " << *new_url;
+        *new_url = GURL(
+            (local ? GetDefaultIPFSLocalGateway() : GetDefaultIPFSGateway()) +
+            (ipfs_scheme ? "/ipfs/" : "/ipns/") + cid + path);
+        LOG(ERROR) << ".........New URL is: " << *new_url;
+        VLOG(1) << "[IPFS] " << __func__ << " new URL: " << *new_url
+                << ", and: " << GetDefaultIPFSGateway();
       }
 
       return true;
